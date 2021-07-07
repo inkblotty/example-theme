@@ -1,21 +1,19 @@
-import { css, CSSObject } from '@emotion/react';
+import { Interpolation, Theme } from '@emotion/react';
 import React, { HTMLAttributes } from 'react';
 import buttonStyles from './Button.styles';
 
 type ButtonVariant = 'primary' | 'secondary' | 'minimal' | 'link';
 export interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
-  styles?: CSSObject;
+  css?: Interpolation<Theme>;
   variant?: ButtonVariant;
 };
 const Button: React.FC<ButtonProps> = ({
   children,
-  styles,
+  css,
   variant = 'primary',
 }) => {
-  console.log(buttonStyles[variant])
   return (
-    <button css={[buttonStyles[variant], styles]}>
-    {/* <button className={css({ backgroundColor: 'red'}).name} > */}
+    <button css={[buttonStyles[variant], css]}>
       {children}
     </button>
   );

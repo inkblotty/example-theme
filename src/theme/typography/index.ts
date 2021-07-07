@@ -1,3 +1,2 @@
-// const typographyByBrand = require(`./${process.env.BRAND_NAME}`);
-const typographyByBrand = require('./FJ.ts');
+const typographyByBrand = require(`./${process.env.REACT_APP_BRAND_NAME}.ts`).default;
 export default typographyByBrand;

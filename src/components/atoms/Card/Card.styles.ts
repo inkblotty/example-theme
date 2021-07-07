@@ -4,9 +4,20 @@ import { BrandStyleOverrides, StyleDefinition } from "../../../theme/themeHelper
 const baseStyles: StyleDefinition = {
   wrapper: theme => ({
     boxShadow: theme.elevations['03'],
-    borderRadius: 5,
-    padding: theme.spacing.md,
+    borderRadius: 4,
+    display: 'flex',
+    flexWrap: 'wrap',
+    maxWidth: 340,
+    overflow: 'hidden',
+    padding: 0,
   }),
 };
-const overrides: BrandStyleOverrides = {};
-export default makeStylesForBrand(baseStyles, overrides);
+const overrides: BrandStyleOverrides = {
+  fj: {
+    wrapper: theme => ({
+      padding: theme.spacing.md
+    }),
+  },
+};
+const envBrand = process.env.REACT_APP_BRAND_NAME;
+export default makeStylesForBrand(baseStyles, overrides[envBrand as keyof BrandStyleOverrides] || {});

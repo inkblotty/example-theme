@@ -1,3 +1,2 @@
-// const colorByTheme = require(`./${process.env.BRAND_NAME}`)
-const colorByTheme = require('./FJ.ts');
+const colorByTheme = require(`./${process.env.REACT_APP_BRAND_NAME}.ts`).default;
 export default colorByTheme;

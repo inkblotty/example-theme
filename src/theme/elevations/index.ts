@@ -1,4 +1,3 @@
-// const elevationsByTheme = require(`./${process.env.BRAND_NAME}`);
-const elevationsByTheme = require('./FJ.ts');
+const elevationsByTheme = require(`./${process.env.REACT_APP_BRAND_NAME}.ts`).default;
 
 export default elevationsByTheme;

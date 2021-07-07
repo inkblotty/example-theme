@@ -4,42 +4,59 @@ import { BrandStyleOverrides, StyleDefinition } from "../../../theme/themeHelper
 
 const flexButtons: CSSObject = {
   alignItems: 'center',
+  border: 0,
+  borderRadius: 4,
+  boxShadow: 'none',
+  cursor: 'pointer',
   display: 'flex',
+  fontSize: 16,
   justifyContent: 'center',
 };
 
 const baseStyles: StyleDefinition = {
   primary: theme => ({
     ...flexButtons,
-    backgroundColor: theme.colors.primary[600],
+    background: theme.colors.primary[600],
     color: theme.colors.neutral[100],
+    padding: `${theme.spacing.xs}px ${theme.spacing.sm}px`,
     ':hover, :focus': {
-      backgroundColor: theme.colors.primary[800],
+      background: theme.colors.primary[800],
     },
   }),
   secondary: theme => ({
     ...flexButtons,
-    backgroundColor: 'transparent',
+    background: 'transparent',
     border: `2px solid ${theme.colors.primary[600]}`,
     color: theme.colors.primary[600],
+    padding: `${theme.spacing.xs}px ${theme.spacing.sm}px`,
     ':hover, :focus': {
       borderColor: theme.colors.primary[800],
       color: theme.colors.primary[800],
     },
   }),
   link: theme => ({
+    background: 'transparent',
+    border: 0,
     boxShadow: 'none',
     color: theme.colors.primary['500'],
+    cursor: 'pointer',
     padding: 0,
     textDecoration: 'underline',
   }),
   minimal: {
+    background: 'transparent',
     boxShadow: 'none',
     border: 0,
+    cursor: 'pointer',
   },
 };
 const overrides: BrandStyleOverrides = {
   fj: {
+    // minimal: {
+    //   color: 'purple',
+    // }
   },
 };
-export default makeStylesForBrand(baseStyles, overrides);
+
+const envBrand = (process.env.REACT_APP_BRAND_NAME)?.toLowerCase();
+export default makeStylesForBrand(baseStyles, overrides[envBrand as keyof BrandStyleOverrides] || {});
