@@ -7,7 +7,7 @@ export interface RecipeCardProps {
 const RecipeCard: React.FC<RecipeCardProps> = () => {
   return (
     <Card>
-      
+            
     </Card>
   );
 };
