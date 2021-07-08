@@ -1,14 +1,10 @@
 import { BrandStyleOverrides, StyleDefinition } from "../themeHelpers.types";
 
-const makeStylesForBrand = (
-  baseStyles: StyleDefinition,
-  overrides: StyleDefinition,
-  brandName?: keyof BrandStyleOverrides,
-) : StyleDefinition => {
+export const recursiveSmooshTwoBrands = (obj1: StyleDefinition, obj2: StyleDefinition): StyleDefinition => {
   // recursively map so that overrides smooshes into baseStyles
   const simpleValueTypes = ['string', 'number', 'boolean'];
-  const end: StyleDefinition = { ...baseStyles };
-  Object.entries(overrides).forEach(([key, value]) => {
+  const end: StyleDefinition = { ...obj1 };
+  Object.entries(obj2).forEach(([key, value]) => {
     if (!value) {
       // special case for 0, null, and undefined since null would be type 'object'
       end[key] = value;
@@ -16,17 +12,23 @@ const makeStylesForBrand = (
       end[key] = value;
     } else if (typeof value === 'function') {
       // @ts-ignore
-      end[key] = theme => makeStylesForBrand(
+      end[key] = theme => recursiveSmooshTwoBrands(
         // @ts-ignore
         typeof end[key] === 'function' ? end[key](theme) : end[key],
         value(theme) as StyleDefinition,
-        brandName,
       );
     } else {
       // @ts-ignore
-      end[key] = makeStylesForBrand(end[key], value, brandName);
+      end[key] = recursiveSmooshTwoBrands(end[key], value);
     }
   });
   return end;
+}
+const makeStylesForBrand = (
+  baseStyles: StyleDefinition,
+  overrides: BrandStyleOverrides,
+  brandName?: keyof BrandStyleOverrides,
+) : StyleDefinition => {
+  return recursiveSmooshTwoBrands(baseStyles, overrides[brandName as keyof BrandStyleOverrides] || {});
 };
 export default makeStylesForBrand;

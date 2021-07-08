@@ -19,5 +19,4 @@ const overrides: BrandStyleOverrides = {
     }),
   },
 };
-const envBrand = process.env.REACT_APP_BRAND_NAME;
-export default makeStylesForBrand(baseStyles, overrides[envBrand as keyof BrandStyleOverrides] || {});
+export default makeStylesForBrand(baseStyles, overrides);

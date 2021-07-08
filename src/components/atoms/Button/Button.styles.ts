@@ -52,11 +52,10 @@ const baseStyles: StyleDefinition = {
 };
 const overrides: BrandStyleOverrides = {
   fj: {
-    // minimal: {
-    //   color: 'purple',
-    // }
+    minimal: {
+      color: 'purple',
+    }
   },
 };
 
-const envBrand = (process.env.REACT_APP_BRAND_NAME)?.toLowerCase();
-export default makeStylesForBrand(baseStyles, overrides[envBrand as keyof BrandStyleOverrides] || {});
+export default makeStylesForBrand(baseStyles, overrides);

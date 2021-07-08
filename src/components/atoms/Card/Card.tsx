@@ -6,7 +6,6 @@ export interface CardProps {
   wrapperStyles?: CSSObject;
 };
 const Card: React.FC<CardProps> = ({ children, wrapperStyles }) => {
-  console.log('styles', styles);
   return (
     <div css={[styles.wrapper, wrapperStyles]}>
       {children}
