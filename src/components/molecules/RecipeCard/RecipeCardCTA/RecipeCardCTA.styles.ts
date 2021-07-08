@@ -2,9 +2,9 @@ import makeStylesForBrand from "../../../../theme/helpers/getStylesByBrand";
 import { BrandStyleOverrides, StyleDefinition } from "../../../../theme/themeHelpers.types";
 
 const styles: StyleDefinition = {
-  wrapperDiv: theme => ({
+  wrapperDiv: {
     width: '100%',
-  }),
+  },
   wrapper: {
     width: '100%',
   },
@@ -33,9 +33,9 @@ const styles: StyleDefinition = {
 };
 const overrides: BrandStyleOverrides = {
   fj: {
-    wrapperDiv: theme => ({
-      margin: `${theme.spacing.sm}px`,
-    })
+    // wrapperDiv: {
+    //   margin: 16,
+    // }
   }
 }
 export default makeStylesForBrand(styles, overrides);

@@ -52,9 +52,9 @@ const baseStyles: StyleDefinition = {
 };
 const overrides: BrandStyleOverrides = {
   fj: {
-    minimal: {
-      color: 'purple',
-    }
+    // minimal: {
+    //   color: 'purple',
+    // }
   },
 };
 

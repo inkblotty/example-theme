@@ -29,6 +29,7 @@ const makeStylesForBrand = (
   overrides: BrandStyleOverrides,
   brandName?: keyof BrandStyleOverrides,
 ) : StyleDefinition => {
-  return recursiveSmooshTwoBrands(baseStyles, overrides[brandName as keyof BrandStyleOverrides] || {});
+  const overridesByBrand = overrides[(brandName?.toLowerCase() || process.env.REACT_APP_BRAND_NAME?.toLowerCase()) as keyof BrandStyleOverrides] || {}
+  return recursiveSmooshTwoBrands(baseStyles, overridesByBrand);
 };
 export default makeStylesForBrand;

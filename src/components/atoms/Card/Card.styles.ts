@@ -14,9 +14,9 @@ const baseStyles: StyleDefinition = {
 };
 const overrides: BrandStyleOverrides = {
   fj: {
-    wrapper: theme => ({
-      padding: theme.spacing.md
-    }),
+    // wrapper: theme => ({
+    //   padding: theme.spacing.md
+    // }),
   },
 };
 export default makeStylesForBrand(baseStyles, overrides);
