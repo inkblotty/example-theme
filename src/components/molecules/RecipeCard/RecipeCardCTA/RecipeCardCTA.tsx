@@ -13,7 +13,6 @@ const WrapperDiv: React.FC = ({ children }) => (
   </div>
 );
 const RecipeCardCTA: React.FC<RecipeCardCTAProps> = ({ isSoldOut, numSelected, variant }) => {
-  console.log('styles', styles);
   if (isSoldOut) {
     return (
       <WrapperDiv>
