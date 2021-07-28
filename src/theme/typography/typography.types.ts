@@ -1,14 +1,43 @@
 export interface Typography {
   body: {
-    main: string;
-    bold: string;
+    main: {
+      face: string;
+      urls: string[];
+    };
+    bold:  {
+      face: string;
+      urls: string[];
+    };
   };
   headings: {
-    main: string;
-    bold: string;
+    main:  {
+      face: string;
+      urls: string[];
+    };
+    bold:  {
+      face: string;
+      urls: string[];
+    };
   };
-  alterate: {
-    main: string;
-    bold: string;
+  alternate: {
+    main:  {
+      face: string;
+      urls: string[];
+    };
+    bold:  {
+      face: string;
+      urls: string[];
+    };
   }
 }
+
+// export interface FontInformation {
+//   face: string;
+//   urls: string[];
+// };
+// export interface FontFaces {
+//   [key:string]: { // @font-face
+//     fontFamily: string;
+//     src: string;
+//   }
+// };

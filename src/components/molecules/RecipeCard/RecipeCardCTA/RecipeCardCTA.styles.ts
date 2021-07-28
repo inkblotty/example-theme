@@ -13,7 +13,7 @@ const styles: StyleDefinition = {
     backgroundColor: theme.colors.primary[600],
     color: 'white',
     display: 'flex',
-    fontFamily: 'Verdana',
+    fontFamily: theme.typography.body.main.face,
     justifyContent: 'space-between',
     height: '2.2em',
     width: '100%',

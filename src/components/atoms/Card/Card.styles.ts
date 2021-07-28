@@ -3,7 +3,7 @@ import { BrandStyleOverrides, StyleDefinition } from "../../../theme/themeHelper
 
 const baseStyles: StyleDefinition = {
   wrapper: theme => ({
-    boxShadow: theme.elevations['03'],
+    boxShadow: theme.shadows['03'],
     borderRadius: 4,
     display: 'flex',
     flexWrap: 'wrap',

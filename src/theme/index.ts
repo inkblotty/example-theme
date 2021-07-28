@@ -1,12 +1,12 @@
 import { Theme } from "@emotion/react";
 import colors from './colors';
-import elevations from "./elevations";
+import shadows from "./shadows";
 import spacing from './spacing';
 import typography from './typography';
 
 const theme: Theme = {
   colors,
-  elevations,
+  shadows,
   spacing,
   typography,
 };
