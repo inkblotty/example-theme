@@ -4,10 +4,12 @@ import { Shadows } from './shadows/shadows.types';
 import { Typography } from "./typography/typography.types";
 
 declare module '@emotion/react' {
-  export interface Theme {
+  export interface BaseTheme {
     colors: Colors;
     shadows: Shadows;
     typography: Typography;
     spacing: Spacing;
+  }
+  export interface Theme extends BaseTheme {
   }
 }
