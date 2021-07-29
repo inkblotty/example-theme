@@ -1,14 +1,32 @@
 export interface Typography {
   body: {
-    main: string;
-    bold: string;
+    main: {
+      family: string;
+      urls: string[];
+    };
+    bold:  {
+      family: string;
+      urls: string[];
+    };
   };
   headings: {
-    main: string;
-    bold: string;
+    main:  {
+      family: string;
+      urls: string[];
+    };
+    bold:  {
+      family: string;
+      urls: string[];
+    };
   };
-  alterate: {
-    main: string;
-    bold: string;
+  alternate: {
+    main:  {
+      family: string;
+      urls: string[];
+    };
+    bold:  {
+      family: string;
+      urls: string[];
+    };
   }
 }

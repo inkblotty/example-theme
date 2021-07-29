@@ -1,12 +1,12 @@
 import { Colors } from "./colors/colors.types";
 import { Spacing } from "./spacing/spacing.types";
-import { Elevations } from './elevations/elevations.types';
+import { Shadows } from './shadows/shadows.types';
 import { Typography } from "./typography/typography.types";
 
 declare module '@emotion/react' {
   export interface Theme {
     colors: Colors;
-    elevations: Elevations;
+    shadows: Shadows;
     typography: Typography;
     spacing: Spacing;
   }
