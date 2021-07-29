@@ -1,4 +1,4 @@
-import backupSpacing from "./backupSpacing";
+import baseSpacing from "./base";
 import { Spacing } from "./spacing.types";
 
 const spacing = (code?:string):Spacing => {
@@ -6,10 +6,10 @@ const spacing = (code?:string):Spacing => {
     if (code) {
       return require(`./${code}.ts`).default;
     } else {
-      return require(`./${process.env.REACT_APP_BRAND_NAME}.ts`).default || backupSpacing;
+      return require(`./${process.env.REACT_APP_BRAND_NAME}.ts`).default || baseSpacing;
     }
   } catch(e) {
-    return backupSpacing;
+    return baseSpacing;
   }
 }
 
