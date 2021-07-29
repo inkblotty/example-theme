@@ -17,30 +17,9 @@ export const generateFontFaces = (typography: Typography) => {
     return {
       // eslint-disable-next-line no-useless-computed-key
       ['@font-face']: {
-        fontFamily: `'${font.face}'`,
+        fontFamily: `'${font.family}'`,
         src: urls.join(', '),
       }
     }
   });
 };
-
-// export const generateFontFaces = (typography: Typography) : FontFaces[] => {
-//   const faces: FontFaces[] = [];
-//   Object.values(typography).forEach((value) => {
-//     Object.values(value).forEach((font) => {
-//       const urls = (font as FontInformation)?.urls.map(url => {
-//         const parts = url.split('.');
-//         return `url('${url}') format('${parts[parts.length - 1]}')`
-//       });
-//       const face = {
-//         // eslint-disable-next-line no-useless-computed-key
-//         ['@font-face']: {
-//           fontFamily: (font as FontInformation)?.face,
-//           src: urls.join(', '),
-//         }
-//       };
-//       faces.push(face);
-//     })
-//   });
-//   return faces;
-// };

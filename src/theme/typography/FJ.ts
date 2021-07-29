@@ -3,7 +3,7 @@ import { Typography } from "./typography.types";
 const fjTypography: Typography = {
   body: {
     main: {
-      face: 'RationalText-SemiBold', // don't love the name 'face'
+      family: 'RationalText-SemiBold',
       urls: [
         'https://go.factor75.com/assets/factor/fonts/RationalText/RationalText-Book.eot',
         'https://go.factor75.com/assets/factor/fonts/RationalText/RationalText-Book.ttf',
@@ -12,7 +12,7 @@ const fjTypography: Typography = {
       ],
     },
     bold: {
-      face: 'RationalText-Book',
+      family: 'RationalText-Book',
       urls: [
         'https://go.factor75.com/assets/factor/fonts/RationalText/RationalText-SemiBold.eot',
         'https://go.factor75.com/assets/factor/fonts/RationalText/RationalText-SemiBold.ttf',
@@ -23,7 +23,7 @@ const fjTypography: Typography = {
   },
   headings: {
     main: {
-      face: 'RationalText-SemiBold',
+      family: 'RationalText-SemiBold',
       urls: [
         'https://go.factor75.com/assets/factor/fonts/RationalText/RationalText-Book.eot',
         'https://go.factor75.com/assets/factor/fonts/RationalText/RationalText-Book.ttf',
@@ -32,7 +32,7 @@ const fjTypography: Typography = {
       ],
     },
     bold: {
-      face: 'RationalText-Book',
+      family: 'RationalText-Book',
       urls: [
         'https://go.factor75.com/assets/factor/fonts/RationalText/RationalText-SemiBold.eot',
         'https://go.factor75.com/assets/factor/fonts/RationalText/RationalText-SemiBold.ttf',
@@ -43,7 +43,7 @@ const fjTypography: Typography = {
   },
   alternate: {
     main: {
-      face: 'RationalText-SemiBold',
+      family: 'RationalText-SemiBold',
       urls: [
         'https://go.factor75.com/assets/factor/fonts/RationalText/RationalText-Book.eot',
         'https://go.factor75.com/assets/factor/fonts/RationalText/RationalText-Book.ttf',
@@ -52,7 +52,7 @@ const fjTypography: Typography = {
       ],
     },
     bold: {
-      face: 'RationalText-Book',
+      family: 'RationalText-Book',
       urls: [
         'https://go.factor75.com/assets/factor/fonts/RationalText/RationalText-SemiBold.eot',
         'https://go.factor75.com/assets/factor/fonts/RationalText/RationalText-SemiBold.ttf',
