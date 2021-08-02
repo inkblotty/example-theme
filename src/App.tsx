@@ -1,9 +1,12 @@
+import React, { useState, useMemo } from 'react';
 import { Global, ThemeProvider } from '@emotion/react';
 import RecipeCard from './components/molecules/RecipeCard';
-import theme from './theme';
+import getTheme from './theme';
 import { generateFontFaces } from './theme/helpers/generateFontFaces';
 
 function App() {
+  const [brand, setBrand] = useState(`${process.env.REACT_APP_BRAND_NAME}`);
+  const theme = useMemo(() => getTheme(brand), [brand])
   return (
     <ThemeProvider theme={theme}>
       <Global styles={generateFontFaces(theme.typography)}/>
@@ -27,6 +30,8 @@ function App() {
           recipe={{}}
         />
       </div>
+      <button onClick={() => setBrand('ER')}>EVERYPLATE</button>
+      <button onClick={() => setBrand('FJ')}>FACTOR</button>
     </ThemeProvider>
   );
 }

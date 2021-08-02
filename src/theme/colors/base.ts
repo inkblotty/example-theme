@@ -1,15 +1,15 @@
-import type { Colors } from './colors.types';
+import { Colors } from "./colors.types";
 
-const erColors: Colors = {
+const baseColors : Colors = {
   primary: {
-    100: '#FF0000',
-    200: '#FF0000',
-    300: '#FF0000',
-    400: '#FF0000',
-    500: '#FF0000',
-    600: '#FF0000',
-    700: '#FF0000',
-    800: '#FF0000',
+    100: '#D1EBCE',
+    200: '#A3D69E',
+    300: '#75C26D',
+    400: '#4B9743',
+    500: '#367A30',
+    600: '#206B19',
+    700: '#1A5614',
+    800: '#13400F',
     900: undefined,
   },
   secondary: {
@@ -90,4 +90,4 @@ const erColors: Colors = {
     900: undefined,
   }
 };
-export default erColors;
+export default baseColors;

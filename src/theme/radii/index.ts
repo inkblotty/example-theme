@@ -1,8 +1,16 @@
-// alternate way we could do this:
-/*
-const radii = code => require(`./${code}.ts`)?.default || require('./base.ts');
+import baseRadii from "./base";
+import { Radii } from "./radii.types";
 
-// note the above method could allow for run-time theme changes
-*/
-const radii = require(`./${process.env.REACT_APP_BRAND_NAME}.ts`)?.default;
+const radii = (code?:string):Radii => {
+  try {
+    if (code) {
+      return require(`./${code}.ts`).default;
+    } else {
+      return require(`./${process.env.REACT_APP_BRAND_NAME}.ts`).default || baseRadii;
+    }
+  } catch(e) {
+    return baseRadii;
+  }
+}
+
 export default radii;

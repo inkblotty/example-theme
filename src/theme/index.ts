@@ -4,11 +4,11 @@ import shadows from "./shadows";
 import spacing from './spacing';
 import typography from './typography';
 
-const theme: Theme = {
-  colors,
-  shadows,
-  spacing,
-  typography,
-};
+const getTheme = (code?: string): Theme => ({
+  colors: colors(code),
+  shadows: shadows(code),
+  spacing: spacing(code),
+  typography: typography(code),
+});
 
-export default theme;
+export default getTheme;
