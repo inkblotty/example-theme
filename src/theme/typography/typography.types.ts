@@ -8,6 +8,7 @@ export interface Typography {
         lg: string; // large devices
       };
       weight: number;
+      familyUrls: string[];
     };
     large: {
       family: string;
@@ -17,6 +18,7 @@ export interface Typography {
         lg: string;
       };
       weight: number;
+      familyUrls: string[];
     };
     small: {
       family: string;
@@ -26,6 +28,7 @@ export interface Typography {
         lg: string;
       };
       weight: number;
+      familyUrls: string[];
     };
     title: { // do we want this? seems like it should be a heading
       
@@ -39,6 +42,7 @@ export interface Typography {
       lg: string;
     };
     weight: number;
+    familyUrls: string[];
   },
   headings: {
     h1: {
