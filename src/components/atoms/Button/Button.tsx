@@ -38,7 +38,8 @@ const Button: React.FC<ButtonProps> = ({
 Button.getInitialProps = (props) => {
   const { code } = useTheme();
   return {
-    styles: buttonStyles[code || 'baseStyles']
+    styles: buttonStyles[code || 'baseStyles'],
+    ...props,
   }
 }
  */
