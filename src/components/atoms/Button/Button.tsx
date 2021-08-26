@@ -20,7 +20,7 @@ const Button: React.FC<ButtonProps> = ({
 };
 
 /**
- * pre-smooshed import could look like:
+ * pre-smooshed import could look like (pseudocode):
  * 
  *
 const Button: React.FC<ButtonProps> = ({
@@ -36,9 +36,9 @@ const Button: React.FC<ButtonProps> = ({
   );
 };
 Button.getInitialProps = (props) => {
-  const { brand } = useTheme();
+  const { code } = useTheme();
   return {
-    styles: buttonStyles[brand || 'baseStyles']
+    styles: buttonStyles[code || 'baseStyles']
   }
 }
  */
