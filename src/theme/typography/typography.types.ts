@@ -22,7 +22,7 @@ export interface Typography {
       weight: number;
       familyUrls: string[];
     };
-    figcaption: { // this is called microtext in associated docs
+    caption: { // this is called microtext in associated docs
       family: string;
       lineHeight: string;
       weight: number;
