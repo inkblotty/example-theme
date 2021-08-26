@@ -18,4 +18,29 @@ const Button: React.FC<ButtonProps> = ({
     </button>
   );
 };
+
+/**
+ * pre-smooshed import could look like:
+ * 
+ *
+const Button: React.FC<ButtonProps> = ({
+  styles,
+  children,
+  css,
+  variant = 'primary',
+}) => {
+  return (
+    <button css={[styles[variant], css]}>
+      {children}
+    </button>
+  );
+};
+Button.getInitialProps = (props) => {
+  const { brand } = useTheme();
+  return {
+    styles: buttonStyles[brand || 'baseStyles']
+  }
+}
+ */
+
 export default Button;

@@ -59,3 +59,16 @@ const overrides: BrandStyleOverrides = {
 };
 
 export default makeStylesForBrand(baseStyles, overrides);
+
+/**
+ * pre-smooshed styles could look like:
+ * 
+ * 
+const allStyles = {
+  baseStyles,
+  fj: makeStylesForBrand(baseStyles, overrides, 'fj'),
+  er: makeStylesForBrand(baseStyles, overrides, 'er'),
+}
+
+export default allStyles;
+ */
