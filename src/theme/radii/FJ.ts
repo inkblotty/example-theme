@@ -5,5 +5,6 @@ const fjRadii : Radii = {
   md: 12,
   lg: 22,
   xl: 32,
+  full: 999,
 };
 export default fjRadii;
