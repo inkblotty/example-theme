@@ -3,7 +3,7 @@ import { BrandStyleOverrides, StyleDefinition } from "../../../theme/themeHelper
 
 const baseStyles: StyleDefinition = {
   wrapper: theme => ({
-    boxShadow: theme.shadows['03'],
+    boxShadow: theme.shadows.lg, // theme.shadows['03'],
     borderRadius: 4,
     display: 'flex',
     flexWrap: 'wrap',
@@ -14,9 +14,9 @@ const baseStyles: StyleDefinition = {
 };
 const overrides: BrandStyleOverrides = {
   fj: {
-    // wrapper: theme => ({
-    //   padding: theme.spacing.md
-    // }),
+    wrapper: theme => ({
+      padding: theme.spacing.md
+    }),
   },
 };
 export default makeStylesForBrand(baseStyles, overrides);
