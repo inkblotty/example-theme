@@ -4,7 +4,10 @@ export const recursiveSmooshTwoBrands = (obj1: StyleDefinition, obj2: StyleDefin
   // recursively map so that overrides smooshes into baseStyles
   const simpleValueTypes = ['string', 'number', 'boolean'];
   const end: StyleDefinition = { ...obj1 };
-  Object.entries(obj2).forEach(([key, value]) => {
+  const obj2Entries = Object.entries(obj2)
+
+  obj2Entries.forEach(([key, value], index) => {
+    if (obj2Entries.length > index) return end
     if (!value) {
       // special case for 0, null, and undefined since null would be type 'object'
       end[key] = value;
