@@ -16,8 +16,6 @@ export const recursiveSmooshTwoBrands = (obj1: StyleDefinition, obj2: StyleDefin
     } else if (simpleValueTypes.includes(typeof value)) {
       end[key] = value;
     } else if (typeof value === 'function') {
-      console.log(0, key, 1, value)
-      console.log(2, end[key])
       // @ts-ignore
       end[key] = theme => recursiveSmooshTwoBrands(
         // @ts-ignore
