@@ -7,12 +7,15 @@ export const recursiveSmooshTwoBrands = (obj1: StyleDefinition, obj2: StyleDefin
   const obj2Entries = Object.entries(obj2)
 
   obj2Entries.forEach(([key, value], index) => {
-    if (obj2Entries.length > index) return end
+    if (obj2Entries.length <= index+1) return end
+
     if (!value) {
       // special case for 0, null, and undefined since null would be type 'object'
       end[key] = value;
+
     } else if (simpleValueTypes.includes(typeof value)) {
       end[key] = value;
+
     } else if (typeof value === 'function') {
       // @ts-ignore
       end[key] = theme => recursiveSmooshTwoBrands(
