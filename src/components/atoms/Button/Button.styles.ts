@@ -56,10 +56,6 @@ const overrides: BrandStyleOverrides = {
       color: 'purple',
       backgroundColor: 'purple',
     },
-    primary: {
-      color: 'purple',
-      backgroundColor: 'purple',
-    }
   },
 };
 
