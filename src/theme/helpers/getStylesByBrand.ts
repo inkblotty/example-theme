@@ -6,10 +6,8 @@ export const recursiveSmooshTwoBrands = (obj1: StyleDefinition, obj2: StyleDefin
   const end: StyleDefinition = { ...obj1 };
   const obj2Entries = Object.entries(obj2)
 
-  let i = 0;
-  obj2Entries.forEach(([key, value]) => {
-    i++
-    if (i >= obj2Entries.length) return end
+  obj2Entries.forEach(([key, value], index) => {
+    if (obj2Entries.length > index) return end
     if (!value) {
       // special case for 0, null, and undefined since null would be type 'object'
       end[key] = value;
