@@ -54,6 +54,11 @@ const overrides: BrandStyleOverrides = {
   fj: {
     minimal: {
       color: 'purple',
+      backgroundColor: 'purple',
+    },
+    primary: {
+      color: 'purple',
+      backgroundColor: 'purple',
     }
   },
 };
